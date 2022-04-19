@@ -167,7 +167,7 @@ def detect(opt):
             imc = im0.copy() if save_crop else im0  # for save_crop
 
             annotator = Annotator(im0, line_width=2, pil=not ascii)
-
+            w, h = im0.shape[1], im0.shape[0]
             if det is not None and len(det):
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_coords(im.shape[2:], det[:, :4], im0.shape).round()
@@ -274,7 +274,7 @@ def detect(opt):
 def count_obj(box, w, h, id):
     global count, data
     center_coor = (int(box[0] + (box[2]-box[0])/2 ), int(box[1] + (box[3] - box[1])/2 ))
-    if int(box[0] + (box[2]-box[0])/2 < int(w/2)) and int(box[1] + (box[3] - box[1])/2) < h and id not in data:
+    if int(box[0] + (box[2]-box[0])/2) > int(w/2) and int(box[1] + (box[3] - box[1])/2) < h and id not in data:
         count += 1
         data.append(id)
 
