@@ -37,6 +37,7 @@ if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 count = 0
+count2 = 0
 data = []
 
 def detect(opt):
@@ -167,7 +168,9 @@ def detect(opt):
             imc = im0.copy() if save_crop else im0  # for save_crop
 
             annotator = Annotator(im0, line_width=2, pil=not ascii)
+            
             w, h = im0.shape[1], im0.shape[0]
+
             if det is not None and len(det):
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_coords(im.shape[2:], det[:, :4], im0.shape).round()
@@ -240,13 +243,24 @@ def detect(opt):
             if save_vid:
                 color = (0, 255, 0)
                 start_point = (0, h - 350)
-                end_point = (int(w/2), h - 350)
+                end_point = (int(w/2) - 50, h - 350)
                 cv2.line(im0, start_point, end_point, color, thickness=2)
                 org = (150, 150)
                 font = cv2.FONT_HERSHEY_COMPLEX
                 fontScale = 3
                 thickness = 3
                 cv2.putText(im0, str(count), org, font, fontScale, color, thickness, cv2.LINE_AA)
+
+                color = (255, 0, 0)
+                start_point = (int(w/2) + 50, h - 350)
+                end_point = (w, h - 350)
+                cv2.line(im0, start_point, end_point, color, thickness=2)
+                org = (w - 150, 150)
+                font = cv2.FONT_HERSHEY_COMPLEX
+                fontScale = 3
+                thickness = 3
+                cv2.putText(im0, str(count2), org, font, fontScale, color, thickness, cv2.LINE_AA)
+
                 if vid_path[i] != save_path:  # new video
                     vid_path[i] = save_path
                     if isinstance(vid_writer[i], cv2.VideoWriter):
@@ -272,11 +286,15 @@ def detect(opt):
         strip_optimizer(yolo_model)  # update model (to fix SourceChangeWarning)
 
 def count_obj(box, w, h, id):
-    global count, data
+    global count, count2, data
     center_coor = (int(box[0] + (box[2]-box[0])/2 ), int(box[1] + (box[3] - box[1])/2 ))
-    if int(box[0] + (box[2]-box[0])/2) > int(w/2) and int(box[1] + (box[3] - box[1])/2) < h and id not in data:
-        count += 1
+    if int(box[1] + (box[3] - box[1])/2) > h - 350 and id not in data:
+        if int(box[0] + (box[2]-box[0])/2) > int(w/2):
+            count2 += 1
+        else:
+            count += 1
         data.append(id)
+    
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
