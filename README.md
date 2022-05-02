@@ -88,7 +88,7 @@ $ ls */*
 ```
 3. Put dataset in /datasets/train and /datasets/valid directories
 
-*(Optional)download vehicles datasets from [MaryamBoneh/Vehicle-Detection](https://github.com/MaryamBoneh/Vehicle-Detection) by this [link](https://b2n.ir/vehicleDataset)
+* (Optional)download vehicles datasets from [MaryamBoneh/Vehicle-Detection](https://github.com/MaryamBoneh/Vehicle-Detection) by this [link](https://b2n.ir/vehicleDataset)
 
 4. Edit yolo config in /models
 ```
