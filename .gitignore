@@ -1,2 +1,7 @@
 runs/
 *.pt
+datasets/*
+weights_best/*.pt
+yolov5/runs/train/
+yolov5/dataset/*
+yolov5/wandb/run*
