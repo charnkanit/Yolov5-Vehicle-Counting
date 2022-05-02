@@ -17,9 +17,7 @@ pip install -r requirement.txt
 
 * (Optional) Download pretrained weight [vehicle_weight.pt](https://drive.google.com/file/d/1mNBeJozHTnMsFqX7KQWmgeeKAwikHu0U/view?usp=sharing)
 
-### Executing program
-
-* Run tracking
+### Executing program track.py to track object
 1. Media source
 ```
 $ python track.py --source 0  # webcam
@@ -50,7 +48,7 @@ $ python track.py --source 0 --yolo_model yolov5n.pt --img 640  --save-vid
                                                                 --show-vid
                                                                 --save-txt
 ```
-* Train your own weight with custom data
+### Train your own weight with custom data
 1. Change to yolov5 directory
 ```
 $ cd yolov5
@@ -77,6 +75,36 @@ val: dataset/valid/images       # path to validation images directory
 $ mkdir train
 $ mkdir valid
 ```
+3. Edit yolo config in /models
+```
+# Example in case of using yolov5m.yaml -> change no. of classes in parameters section to match your classes. Like below!
+      |
+      |
+      v
+# Parameters
+nc: 5 #  <--- this one (number of classes)
+depth_multiple: 0.67  # model depth multiple
+width_multiple: 0.75  # layer channel multiple
+anchors:
+  - [10,13, 16,30, 33,23]  # P3/8
+  - [30,61, 62,45, 59,119]  # P4/16
+  - [116,90, 156,198, 373,326]  # P5/32
+                  .
+                  .
+                  .
+```
+4. Run train.py (ex. img_size = 640px, batch_size = 16, epochs = 3)
+
+For new train weight
+```
+$ python train.py --img 640 --batch 16 --epochs 3 --data models/custom_yolov5.yaml --weights ''
+```
+
+For continue trained weight (trained weight name = 'custom_yolov5.pt')
+```
+$ python train.py --img 640 --batch 16 --epochs 3 --data models/custom_yolov5.yaml --weights custom_yolov5.pt
+```
+
 ## Acknowledgments
 
 [Ultralytics (Yolov5)](https://github.com/ultralytics/yolov5)
