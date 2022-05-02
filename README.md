@@ -54,8 +54,10 @@ $ python track.py --source 0 --yolo_model yolov5n.pt --img 640  --save-vid
 $ cd yolov5
 ```
 2. Prepare your custom data in /datasets directory
+
+create datasets/data.yaml
 ```
-# create and edit data.yaml
+$ cd datasets
 $ nano data.yaml
 ```
 ```
@@ -70,12 +72,25 @@ nc: 5                           #no. of classes
 train: dataset/train/images     # path to train images directory
 val: dataset/valid/images       # path to validation images directory
 ```
+create train and validation directory
 ```
-# create train and validation directory
-$ mkdir train
-$ mkdir valid
+$ mkdir train valid
+$ mkdir train/images train/labels valid/images valid/labels
 ```
-3. Edit yolo config in /models
+check the directories are existed
+```
+$ ls */*
+# the output should be look like this
+#
+#
+#
+#
+```
+3. Put dataset in /datasets/train and /datasets/valid directories
+
+(Optional)download vehicles datasets from [MaryamBoneh/Vehicle-Detection](https://github.com/MaryamBoneh/Vehicle-Detection) by this [link](https://b2n.ir/vehicleDataset)
+
+4. Edit yolo config in /models
 ```
 # Example in case of using yolov5m.yaml -> change no. of classes in parameters section to match your classes. Like below!
       |
@@ -93,7 +108,7 @@ anchors:
                   .
                   .
 ```
-4. Run train.py (ex. img_size = 640px, batch_size = 16, epochs = 3)
+5. Run train.py (ex. img_size = 640px, batch_size = 16, epochs = 3)
 
 For new train weight
 ```
