@@ -31,9 +31,11 @@ python track.py --source 0  # webcam
 
 ## Acknowledgments
 
-@misc{yolov5deepsort2020,
-    title={Real-time multi-object tracker using YOLOv5 and deep sort},
-    author={Mikel Broström},
-    howpublished = {\url{https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch}},
-    year={2020}
-}
+<div>
+<a href="https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch/actions"><img src="https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch/workflows/CI%20CPU%20testing/badge.svg" alt="CI CPU testing"></a>
+<br>  
+<a href="https://github.com/dongdv95/yolov5/tree/master/Yolov5_DeepSort_Pytorch"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Yolov5 + Deep Sort with PyTorch"></a>
+ 
+</div>
+
+</div>
