@@ -1,6 +1,6 @@
 runs/
 *.pt
-datasets/*
+datasets/*  
 weights_best/*.pt
 yolov5/runs/train/
 yolov5/dataset/*
