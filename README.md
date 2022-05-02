@@ -15,6 +15,6 @@ pip install -r requirement.txt
 ```
 ### Installing
 
-* (Optional) Download pretrained weight vehicle_weight(https://drive.google.com/file/d/1mNBeJozHTnMsFqX7KQWmgeeKAwikHu0U/view?usp=sharing)
+* (Optional) Download pretrained weight [vehicle_weight](https://drive.google.com/file/d/1mNBeJozHTnMsFqX7KQWmgeeKAwikHu0U/view?usp=sharing)
 
 
