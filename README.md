@@ -32,9 +32,8 @@ python track.py --source 0  # webcam
 ## Acknowledgments
 
 [Ultralytics (Yolov5)](https://github.com/ultralytics/yolov5)
-[Mikel Broström (Yolov5 + Deep Sort with OSNet)](https://github.com/mikel-brostrom/Yolov5_DeepSort_OSNet)
-[MaryamBoneh (Vehicles Dataset)](https://github.com/MaryamBoneh/Vehicle-Detection)
- 
-</div>
 
-</div>
+[Mikel Broström (Yolov5 + Deep Sort with OSNet)](https://github.com/mikel-brostrom/Yolov5_DeepSort_OSNet)
+
+[MaryamBoneh (Vehicles Dataset)](https://github.com/MaryamBoneh/Vehicle-Detection)
+
