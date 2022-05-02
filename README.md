@@ -34,7 +34,7 @@ python track.py --source 0  # webcam
 <div>
 <a href="https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch/actions"><img src="https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch/workflows/CI%20CPU%20testing/badge.svg" alt="CI CPU testing"></a>
 <br>  
-<a href="https://github.com/dongdv95/yolov5/tree/master/Yolov5_DeepSort_Pytorch"><img src="https://www.svgrepo.com/show/303615/github-icon-1-logo.svg" alt="Yolov5 + Deep Sort with PyTorch" style="width = 10px;height = 10px></a>
+<a href="https://github.com/dongdv95/yolov5/tree/master/Yolov5_DeepSort_Pytorch"><img src="https://www.svgrepo.com/show/303615/github-icon-1-logo.svg" alt="Yolov5 + Deep Sort with PyTorch" style="width = 100px;height = 100px"></a>
  
 </div>
 
