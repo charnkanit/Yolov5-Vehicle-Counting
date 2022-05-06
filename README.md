@@ -79,12 +79,14 @@ $ mkdir train/images train/labels valid/images valid/labels
 ```
 check the directories are existed
 ```
-$ ls */*
+$ ls */
 # the output should be look like this
+# 
+# train/:
+# images labels labels.cache
 #
-#
-#
-#
+# valid/:
+# images labels labels.cache
 ```
 3. Put dataset in /datasets/train and /datasets/valid directories
 
@@ -128,3 +130,7 @@ $ python train.py --img 640 --batch 16 --epochs 3 --data models/custom_yolov5.ya
 
 [MaryamBoneh (Vehicles Dataset)](https://github.com/MaryamBoneh/Vehicle-Detection)
 
+## Contributor
+- Ridhirin Lukkanawaraporn
+- [Siriphak Amrapal](https://www.linkedin.com/in/siriphak-amrapal)
+- [Charnkanit Keawwong](www.linkedin.com/in/charnkanit-kaewwong)
