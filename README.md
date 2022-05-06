@@ -17,7 +17,7 @@ pip install -r requirement.txt
 
 * (Optional) Download pretrained weight [vehicle_weight.pt](https://drive.google.com/file/d/1mNBeJozHTnMsFqX7KQWmgeeKAwikHu0U/view?usp=sharing)
 
-### Executing program track.py to track object
+### Executing track.py to track and count object
 1. Media source
 ```
 $ python track.py --source 0  # webcam
