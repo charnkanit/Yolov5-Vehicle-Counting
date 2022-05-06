@@ -1,7 +1,9 @@
-runs/
-*.pt
-datasets/*  
+# ignore massive file
+
+runs/         # track result VDO
+*.pt          # weight
+datasets/* 
 weights_best/*.pt
-yolov5/runs/train/
-yolov5/dataset/*
-yolov5/wandb/run*
+yolov5/runs/train/    # yolov5 custom dataset train weight
+yolov5/dataset/*      # custom dataset
+yolov5/wandb/run*     # train validation from wandb
