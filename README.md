@@ -95,10 +95,9 @@ $ ls */
 
 4. Edit yolo config in /models
 ```
-# Example in case of using yolov5m.yaml -> change no. of classes in parameters section to match your classes. Like below!
-
 $ nano /models/yolov5.yaml
 
+# Example in case of using yolov5m.yaml -> change no. of classes in parameters section to match your classes. Like below!
 # Parameters
 nc: 5 #  <--- this one (number of classes)
 depth_multiple: 0.67  # model depth multiple
@@ -115,12 +114,12 @@ anchors:
 
 For new train weight
 ```
-$ python train.py --img 640 --batch 16 --epochs 3 --data models/custom_yolov5.yaml --weights ''
+$ python train.py --img 640 --batch 16 --epochs 48 --data models/custom_yolov5.yaml --weights '' --cache
 ```
 
 For continue trained weight (trained weight name = 'custom_yolov5.pt')
 ```
-$ python train.py --img 640 --batch 16 --epochs 3 --data models/custom_yolov5.yaml --weights custom_yolov5.pt
+$ python train.py --img 640 --batch 16 --epochs 48 --data models/custom_yolov5.yaml --weights custom_yolov5.pt --cache
 ```
 
 ## Acknowledgments
