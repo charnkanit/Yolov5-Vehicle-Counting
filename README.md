@@ -80,6 +80,7 @@ $ mkdir train/images train/labels valid/images valid/labels
 check the directories are existed
 ```
 $ ls */
+
 # the output should be look like this
 # 
 # train/:
@@ -95,9 +96,9 @@ $ ls */
 4. Edit yolo config in /models
 ```
 # Example in case of using yolov5m.yaml -> change no. of classes in parameters section to match your classes. Like below!
-      |
-      |
-      v
+
+$ nano /models/yolov5.yaml
+
 # Parameters
 nc: 5 #  <--- this one (number of classes)
 depth_multiple: 0.67  # model depth multiple
