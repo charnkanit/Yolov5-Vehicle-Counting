@@ -93,7 +93,7 @@ $ ls */
 
 * (Optional)download vehicles datasets from [MaryamBoneh/Vehicle-Detection](https://github.com/MaryamBoneh/Vehicle-Detection) by this [link](https://b2n.ir/vehicleDataset)
 
-4. Edit yolo config in /models
+4. Edit yolo config in /models or download from https://github.com/ultralytics/yolov5/tree/master/models
 ```
 $ nano /models/yolov5.yaml
 
